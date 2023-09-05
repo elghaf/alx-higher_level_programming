@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-# 102-magic_calculation.py
+# 102- magic calculation
 
 
 def magic_calculation(a, b, c):
-    """Match bytecode provided by Holberton School."""
+    """magic calculation a,b,c"""
     if a < b:
         return (c)
     if c > b:
