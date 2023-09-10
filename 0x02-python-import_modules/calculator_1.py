@@ -1,56 +1,51 @@
 #!/usr/bin/python3
-
 def add(a, b):
-    """
-    Adds two integers.
+    """addition function
 
     Args:
-        a (int): The first integer.
-        b (int): The second integer.
+        a: first integer
+        b: second integer
 
     Returns:
-        int: The sum of a and b.
+        return value. a + b
     """
     return (a + b)
 
 
 def sub(a, b):
-    """
-    Subtracts two integers.
+    """subtraction function
 
     Args:
-        a (int): The first integer.
-        b (int): The second integer.
+        a: first integer
+        b: second integer
 
     Returns:
-        int: The result of subtracting b from a.
+        return value. a - b
     """
     return (a - b)
 
 
 def mul(a, b):
-    """
-    Multiplies two integers.
+    """multiplication function
 
     Args:
-        a (int): The first integer.
-        b (int): The second integer.
+        a: first integer
+        b: second integer
 
     Returns:
-        int: The product of a and b.
+        return value. a * b
     """
     return (a * b)
 
 
 def div(a, b):
-    """
-    Divides two integers.
+    """division function
 
     Args:
-        a (int): The numerator.
-        b (int): The denominator.
+        a: first integer
+        b: second integer
 
     Returns:
-        int: The result of dividing a by b.
+        return value. a / b
     """
     return int(a / b)
