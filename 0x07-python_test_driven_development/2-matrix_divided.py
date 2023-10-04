@@ -1,22 +1,26 @@
 #!/usr/bin/python3
 # 2-matrix_divided.py
-"""Defines a matrix division function."""
+"""Defines a matrix division function.
 
+This module contains a function `matrix_divided` that takes a matrix and a divisor as arguments, and returns a new matrix representing the result of dividing all elements in the original matrix by the divisor. The function performs several checks to ensure the input is valid and handles various exceptions.
 
+Functions:
+    matrix_divided(matrix, div) -- Divide all elements of a matrix by a divisor.
+
+Args:
+    matrix (list): A list of lists containing integers or floats, representing the matrix.
+    div (int/float): The divisor to divide each element of the matrix.
+
+Raises:
+    TypeError: If the matrix is not a list of lists of integers or floats.
+    TypeError: If the matrix contains rows of different sizes.
+    TypeError: If the divisor is not an int or float.
+    ZeroDivisionError: If the divisor is 0.
+
+Returns:
+    A new matrix representing the result of the division, with elements rounded to two decimal places.
+"""
 def matrix_divided(matrix, div):
-    """Divide all elements of a matrix.
-
-    Args:
-        matrix (list): A list of lists of ints or floats.
-        div (int/float): The divisor.
-    Raises:
-        TypeError: If the matrix contains non-numbers.
-        TypeError: If the matrix contains rows of different sizes.
-        TypeError: If div is not an int or float.
-        ZeroDivisionError: If div is 0.
-    Returns:
-        A new matrix representing the result of the division.
-    """
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(ele, int) or isinstance(ele, float))
