@@ -1,28 +1,25 @@
 #!/usr/bin/python3
-"""Defines a function that adds two lines."""
+"""
+This is the "5-test_indentation" module.
+The 5-text_indentation module supplies one function, text_indentation(text).
+"""
+
 
 def text_indentation(text):
-    """Print text with two new lines after each '.', '?', and ':'.
-
-    Args:
-        text (string): text to print.
-    Raises:
-        TypeError: If text is not a string.
-    """
-    if not isinstance(text, str):
+    """splits a text into lines along "?", ":", "." followed by 2 new lines"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    conter = 0
-    while counter < len(text) and text[counter] == ' ':
-        counter += 1
-
-    while counter < len(text):
-        print(text[counter], end="")
-        if text[counter] == "\n" or text[counter] in ".?:":
-            if text[counter] in ".?:":
-                print("\n")
-            counter += 1
-            while counter < len(text) and text[counter] == ' ':
-                counter += 1
-            continue
-        counter += 1
+    flag = 0
+    for a in text:
+        if flag == 0:
+            if a == ' ':
+                continue
+            else:
+                flag = 1
+        if flag == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                flag = 0
+            else:
+                print(a, end="")
