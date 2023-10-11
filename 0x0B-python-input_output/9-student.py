@@ -5,7 +5,7 @@
 class Student:
     """Represents a student."""
 
-    def __init__(self, first_name, last_name, age):
+    def __init__(self, first_name, last_name, ages):
         """Initialize a new Student.
 
         Args:
@@ -13,9 +13,9 @@ class Student:
             last_name (str): The last name.
             age (int): The age.
         """
-        self.firt_name = first_name
+        self.first_name = first_name
         self.last_name = last_name
-        self.age = age
+        self.age = ages
 
     def to_json(self):
         """dict get"""
