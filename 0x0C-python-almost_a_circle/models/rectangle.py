@@ -17,6 +17,7 @@ class Rectangle(Base):
         """
         Initialize Rectangle that inherits from base class.
         """
+
         self.width = width
         self.height = height
         self.x = x
@@ -77,3 +78,8 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """area of a Rectangle"""
+        return self.__width * self.__height
+    
