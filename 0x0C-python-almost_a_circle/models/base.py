@@ -20,6 +20,6 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def to_json_string(distro):
+    def to_json_string(list_dictionaries):
         """JSON representation"""
-        return json.dumps(distro) if distro else "[]"
+        return json.dumps(list_dictionaries) if list_dictionaries else "[]"
