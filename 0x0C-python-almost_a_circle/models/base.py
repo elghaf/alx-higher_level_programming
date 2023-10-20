@@ -2,6 +2,8 @@
 
 """Defines a base class."""
 
+import json
+
 class Base:
     """
     Base class:
@@ -17,4 +19,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    
+    @staticmethod
+    def to_json_string(distro):
+        """JSON representation"""
+        return json.dumps(distro) if distro else "[]"
