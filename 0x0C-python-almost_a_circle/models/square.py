@@ -13,3 +13,15 @@ class Square(Rectangle):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Init a square obj"""
         super().__init__(width, height, x, y, id)
+
+    @property
+    def size(self):
+        """get the size of the Square."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Set the size of the square"""
+        self.width = value
+        self.height = value
+    
