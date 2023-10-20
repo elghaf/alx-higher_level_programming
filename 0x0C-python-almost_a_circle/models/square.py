@@ -33,7 +33,7 @@ class Square(Rectangle):
         Args:
             *args: update our args,
             id, size, x, y.
-            **kwargs: Keyw args.
+            **kwargs: Keys args.
         """
         attributes = ['id', 'size', 'x', 'y']
         if len(args) == 0:
