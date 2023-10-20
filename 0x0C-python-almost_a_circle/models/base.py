@@ -5,9 +5,8 @@
 class Base:
     """
     Base class:
-    private class attribute __nb_objects = 0
-    class constructor: def __init__(self, id= None)
-    
+    Private class attributes:
+        __nb_objects (int): Number of how many time instantiate class Bases.
     """
     __nb_objects = 0
     
