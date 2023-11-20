@@ -1,4 +1,3 @@
-
 SELECT name
 FROM tv_genres
 WHERE name NOT IN
