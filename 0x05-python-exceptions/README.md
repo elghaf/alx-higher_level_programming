@@ -1,3 +1,1 @@
-# python exceptions types:
-learning how to use exceptions.
-
+# alx-higher_level_programming

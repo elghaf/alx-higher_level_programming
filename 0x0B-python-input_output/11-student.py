@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+
 """Defines a class Student."""
 
 
 class Student:
-    """Represents a student."""
+    """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
         """Initialize a new Student.
@@ -26,7 +27,6 @@ class Student:
         Args:
             attrs (list): (Optional) The attributes to represent.
         """
-
         if (type(attrs) == list and
                 all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}

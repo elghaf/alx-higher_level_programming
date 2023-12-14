@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""JSON  repr function."""
+
+"""Defines a JSON-to-object function."""
 import json
 
 
 def from_json_string(my_str):
-    """Return the obj in json rep"""
+    """Return the Python object representation of a JSON string."""
     return json.loads(my_str)
