@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const myVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+// Random Comment
 
-myVar.forEach((element) => {
-  console.log(element);
-});
+for (const lang of ['C is fun', 'Python is cool', 'JavaScript is amazing']) {
+  console.log(lang);
+}

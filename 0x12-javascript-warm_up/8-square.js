@@ -1,17 +1,10 @@
 #!/usr/bin/node
-const x = process.argv[2];
+// random ps
 
-if (!parseInt(x)) {
+if (isNaN(process.argv[2])) {
   console.log('Missing size');
 } else {
-  for (let i = 0; i < x; i++) {
-    let y = 0;
-    let myVar = '';
-
-    while (y < x) {
-      myVar = myVar + 'X';
-      y++;
-    }
-    console.log(myVar);
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    console.log('X'.repeat(parseInt(process.argv[2])));
   }
 }
