@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Tthe class definition of a City
+Contains the class definition of a City
 """
 from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 class City(Base):
     """
-   The class that defines each city
+    Class that defines each city
     """
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
