@@ -1,9 +1,9 @@
 #!/usr/bin/node
-// random px
-
 if (process.argv.length <= 3) {
-  console.log('0');
+  console.log(0);
 } else {
-  const list = process.argv.slice(2).map(Number).sort(function (a, b) { return a - b; });
-  console.log(list.reverse()[1]);
+  const numberArgs = process.argv.map(Number)
+    .slice(2, process.argv.length)
+    .sort((x, y) => x - y);
+  console.log(numberArgs[numberArgs.length - 2]);
 }

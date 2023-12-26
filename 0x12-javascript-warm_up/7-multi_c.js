@@ -1,12 +1,11 @@
 #!/usr/bin/node
-// Random ps
 
-const lang = 'C is fun';
-
-if (isNaN(process.argv[2])) {
-  console.log('Missing number of occurences');
-} else {
-  for (let i = 0; i < parseInt(process.argv[2]); i++) {
-    console.log(lang);
+let numberOfTimes = parseInt(process.argv[2]);
+if (!isNaN(numberOfTimes)) {
+  while (numberOfTimes > 0) {
+    console.log('C is fun');
+    numberOfTimes -= 1;
   }
+} else {
+  console.log('Missing number of occurrences');
 }

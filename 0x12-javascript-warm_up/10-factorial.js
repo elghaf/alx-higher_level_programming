@@ -1,12 +1,16 @@
 #!/usr/bin/node
-// random post
 
-function factorial (a) {
-  if ((isNaN(a)) || (a === 1)) {
-    return 1;
+function factorial (number) {
+  if (number === 1) {
+    return (1);
   } else {
-    return a * factorial(a - 1);
+    return (number * factorial(number - 1));
   }
 }
 
-console.log(factorial(parseInt(process.argv[2])));
+const value = process.argv[2];
+if (isNaN(value)) {
+  console.log('1');
+} else {
+  console.log(factorial(value));
+}
