@@ -1,10 +1,8 @@
 #!/usr/bin/node
 
-let cuantity = 0;
+let trackLogs = 0;
 
-const logMe = (item) => {
-  console.log(`${cuantity}: ${item}`);
-  cuantity++;
+exports.logMe = function (item) {
+  console.log(`${trackLogs}: ${item}`);
+  trackLogs++;
 };
-
-module.exports = { logMe };

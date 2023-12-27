@@ -1,11 +1,11 @@
 #!/usr/bin/node
-
 class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
+    if (w <= 0 || h <= 0 || isNaN(h) || isNaN(w)) {
+      return this;
     }
+    this.width = w;
+    this.height = h;
   }
 
   print () {
@@ -15,14 +15,12 @@ class Rectangle {
   }
 
   rotate () {
-    const tmp = this.height;
-    this.height = this.width;
-    this.width = tmp;
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
-    this.height *= 2;
     this.width *= 2;
+    this.height *= 2;
   }
 }
 
