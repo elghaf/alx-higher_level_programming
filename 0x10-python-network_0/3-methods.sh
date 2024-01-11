@@ -1,3 +1,3 @@
-#!/usr/bin/bash
-#Write a Bash script that takes in a URL and displays all HTTP
-
+#!/bin/bash
+# the bin
+curl -siLX OPTIONS "$1" | grep -i 'Allow:' | cut -f2- -d' '

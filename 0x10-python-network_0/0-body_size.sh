@@ -1,3 +1,3 @@
 #!/bin/bash
-#Write a Bash script that takes in a URL
-curl -s -w "%{size_download}\n" -o /dev/null "$1"
+# the bin
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
