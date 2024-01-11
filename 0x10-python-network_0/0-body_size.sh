@@ -1,3 +1,3 @@
 #!/bin/bash
-# Sends a request to URL and displays sizeof the response
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+#Write a Bash script that takes in a URL
+curl -s -w "%{size_download}\n" -o /dev/null "$1"
